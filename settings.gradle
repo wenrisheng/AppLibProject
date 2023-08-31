@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "AppLibProject"
 include ':app'
 include ':module_audioRecord'
+include ':module_commonUtils'

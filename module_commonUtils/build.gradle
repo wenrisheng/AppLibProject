@@ -1,19 +1,17 @@
 plugins {
     id 'com.android.library'
-    id 'maven-publish'
 }
-//apply plugin: 'maven-publish'
 
 group = 'com.github.wenrisheng'
 //artifact = "module_audioRecord"
-version = '0.0.3'
+version = '0.0.1'
 
 android {
-    namespace 'com.wrs.module.audiorecord'
+    namespace 'com.wrs.module.commonutils'
     compileSdk 33
 
     defaultConfig {
-        minSdk 19
+        minSdk 21
         targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -39,19 +37,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
 }
-
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            // Creates a Maven publication called "release".
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.wenrisheng'
-//                artifactId = 'module_audioRecord'
-//                version = '0.0.3'
-//            }
-//        }
-//    }
-//}
