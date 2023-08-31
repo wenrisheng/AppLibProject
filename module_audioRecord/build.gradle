@@ -4,7 +4,7 @@ plugins {
 }
 //apply plugin: 'maven-publish'
 
-group = 'com.github.AppLibProject'
+group = 'com.github.wenrisheng'
 
 android {
     namespace 'com.wrs.module.audiorecord'
