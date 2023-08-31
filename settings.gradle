@@ -1,11 +1,9 @@
 pluginManagement {
     repositories {
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-        maven {url  "http://maven.rongcloud.cn/repository/maven-releases/"}
-        maven { url 'https://jitpack.io' }
-        maven {
-            url "https://maven-other.tuya.com/repository/maven-releases/"
-        }
+//        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+//        maven { url 'https://jitpack.io' }
+
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -14,12 +12,10 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-        maven {url  "http://maven.rongcloud.cn/repository/maven-releases/"}
+//        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
         maven { url 'https://jitpack.io' }
-        maven {
-            url "https://maven-other.tuya.com/repository/maven-releases/"
-        }
+
         google()
         mavenCentral()
     }
