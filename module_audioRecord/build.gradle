@@ -30,6 +30,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    publishing {
+//        multipleVariants {
+//            withSourcesJar()
+//            withJavadocJar()
+//            allVariants()
+//        }
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+        // ...
+    }
 }
 
 dependencies {
@@ -42,16 +55,24 @@ dependencies {
 
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            // Creates a Maven publication called "release".
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.wenrisheng'
-//                artifactId = 'module_audioRecord'
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.wenrisheng'
+                artifactId = 'module_commonUtils'
+                version = '0.0.4'
+            }
+//            debug(MavenPublication) {
+//                // Applies the component for the debug build variant.
+//                from components.debug
+//
+//                groupId = 'com.example.MyLibrary'
+//                artifactId = 'final-debug'
 //                version = '0.0.3'
 //            }
-//        }
-//    }
-//}
+        }
+    }
+}
