@@ -8,12 +8,13 @@ group = 'com.github.wenrisheng'
 //version = '0.0.1'
 
 android {
-    namespace 'com.wrs.module.commonutils'
-    compileSdk 33
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdk 21
-        targetSdk 33
+        minSdkVersion 19
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -29,18 +30,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    publishing {
-//        multipleVariants {
-//            withSourcesJar()
-//            withJavadocJar()
-//            allVariants()
-//        }
-        singleVariant('release') {
-            withSourcesJar()
-            withJavadocJar()
-        }
-        // ...
-    }
+
 }
 
 dependencies {
@@ -60,7 +50,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.wenrisheng'
                 artifactId = 'module_commonUtils'
-                version = '0.0.4'
+                version = '0.0.5'
             }
 //            debug(MavenPublication) {
 //                // Applies the component for the debug build variant.

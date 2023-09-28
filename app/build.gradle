@@ -4,13 +4,12 @@ plugins {
 }
 
 android {
-    namespace 'com.wrs.applibproject'
-    compileSdk 33
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.wrs.applibproject"
-        minSdk 21
-        targetSdk 33
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -70,5 +69,7 @@ dependencies {
 
 //    implementation 'com.github.wenrisheng:module_audioRecord:0.0.3'
 
-    implementation 'org.videolan.android:libvlc-all:3.6.0-eap1'
+//    implementation 'org.videolan.android:libvlc-all:3.6.0-eap1'
+
+    implementation 'com.github.wenrisheng:AppLibProject:0.0.4'
 }

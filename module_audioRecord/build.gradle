@@ -2,19 +2,20 @@ plugins {
     id 'com.android.library'
     id 'maven-publish'
 }
-//apply plugin: 'maven-publish'
+
 
 group = 'com.github.wenrisheng'
 //artifact = "module_audioRecord"
 //version = '0.0.3'
 
 android {
-    namespace 'com.wrs.module.audiorecord'
-    compileSdk 33
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdk 19
-        targetSdk 33
+        minSdkVersion 19
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -29,19 +30,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    publishing {
-//        multipleVariants {
-//            withSourcesJar()
-//            withJavadocJar()
-//            allVariants()
-//        }
-        singleVariant('release') {
-            withSourcesJar()
-            withJavadocJar()
-        }
-        // ...
     }
 }
 
@@ -63,7 +51,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.wenrisheng'
                 artifactId = 'module_commonUtils'
-                version = '0.0.4'
+                version = '0.0.5'
             }
 //            debug(MavenPublication) {
 //                // Applies the component for the debug build variant.
