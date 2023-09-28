@@ -18,6 +18,10 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
     }
 
     buildTypes {
@@ -64,5 +68,7 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
-    implementation 'com.github.wenrisheng:AppLibProject:0.0.1'
+//    implementation 'com.github.wenrisheng:module_audioRecord:0.0.3'
+
+    implementation 'org.videolan.android:libvlc-all:3.6.0-eap1'
 }

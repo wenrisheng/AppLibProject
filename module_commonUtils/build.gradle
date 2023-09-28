@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.github.wenrisheng'
 //artifact = "module_audioRecord"
-version = '0.0.1'
+//version = '0.0.1'
 
 android {
     namespace 'com.wrs.module.commonutils'
